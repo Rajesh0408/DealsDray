@@ -1,3 +1,4 @@
+import 'package:dealsdray/UI/OTPPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -25,21 +26,25 @@ class _PhonePageState extends State<PhonePage> {
   }
 
   body() {
-    return Column(
+    return ListView(
       children: [
         Center(
           child: Image.network(
               'https://play-lh.googleusercontent.com/Im3CE-kmZJmZMC8pkhpCj7tGznPI6LC1EjhaTJ3E6Cdh_mgW5VxF_joZK31XWwZPmkT5=w240-h480-rw'),
         ),
-        ToggleSwitch(
-          // initialLabelIndex: 0,
-          cornerRadius: 50,
-          minWidth: 100,
-          activeBgColor: [Colors.red],
-          labels: ["Phone", "Email"],
-          onToggle: (ind) {
+        Row(
+          children: [
+            SizedBox(width: 130,),
+            ToggleSwitch(
+              // initialLabelIndex: 0,
+              cornerRadius: 50,
+              activeBgColor: [Colors.red],
+              labels: ["Phone", "Email"],
+              onToggle: (ind) {
 
-          },
+              },
+            ),
+          ],
         ),
         if (index==0) phoneUI()
       ],
@@ -103,7 +108,12 @@ class _PhonePageState extends State<PhonePage> {
             },
           ),
         ),
-        MaterialButton(onPressed: () {},
+        MaterialButton(onPressed: () {
+          if(phoneno!=null) {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => OTPPage(phoneno),));
+
+          }
+          },
         height: 60,
         minWidth: 300,
         color: Colors.red,

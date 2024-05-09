@@ -15,7 +15,7 @@ class _EmailPageState extends State<EmailPage> {
   String? password;
   TextEditingController referralController = TextEditingController();
   String? referralCode;
-  bool obscure=false;
+  bool obscure = false;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,10 @@ class _EmailPageState extends State<EmailPage> {
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(20),
         child: FloatingActionButton(
-          child: Icon(Icons.arrow_forward, color: Colors.white,),
+          child: Icon(
+            Icons.arrow_forward,
+            color: Colors.white,
+          ),
           backgroundColor: Colors.red,
           onPressed: () {},
         ),
@@ -34,7 +37,6 @@ class _EmailPageState extends State<EmailPage> {
 
   emailUI() {
     return ListView(
-
       children: [
         SizedBox(
           height: 40,
@@ -78,7 +80,7 @@ class _EmailPageState extends State<EmailPage> {
           height: 30,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 28.0,right: 38),
+          padding: const EdgeInsets.only(left: 28.0, right: 38),
           child: TextField(
             decoration: InputDecoration(
               hintText: "Your Email",
@@ -96,20 +98,21 @@ class _EmailPageState extends State<EmailPage> {
           height: 20,
         ),
         Padding(
-          padding:  const EdgeInsets.only(left: 28.0,right: 38),
+          padding: const EdgeInsets.only(left: 28.0, right: 38),
           child: Container(
             width: 340,
             child: TextField(
               decoration: InputDecoration(
-                hintText: "Create Password",
-                suffixIcon: IconButton(
-                  icon: Icon(obscure?Icons.visibility_off:Icons.visibility), onPressed: () {
-                    setState(() {
-                      obscure=!obscure;
-                    });
-                },
-                )
-              ),
+                  hintText: "Create Password",
+                  suffixIcon: IconButton(
+                    icon:
+                        Icon(obscure ? Icons.visibility_off : Icons.visibility),
+                    onPressed: () {
+                      setState(() {
+                        obscure = !obscure;
+                      });
+                    },
+                  )),
               obscureText: obscure,
               controller: passwordController,
               maxLines: 1,
@@ -125,7 +128,7 @@ class _EmailPageState extends State<EmailPage> {
           height: 20,
         ),
         Padding(
-          padding:  const EdgeInsets.only(left: 28.0,right: 38),
+          padding: const EdgeInsets.only(left: 28.0, right: 38),
           child: Container(
             width: 340,
             child: TextField(
@@ -143,7 +146,6 @@ class _EmailPageState extends State<EmailPage> {
           ),
         ),
       ],
-
     );
   }
 }
