@@ -38,7 +38,7 @@ class _PhonePageState extends State<PhonePage> {
           activeBgColor: [Colors.red],
           labels: ["Phone", "Email"],
           onToggle: (ind) {
-              
+
           },
         ),
         if (index==0) phoneUI()
@@ -113,65 +113,4 @@ class _PhonePageState extends State<PhonePage> {
     );
   }
 
-  // emailUI() {
-  //   return  Column(
-  //     children: [
-  //       SizedBox(
-  //         height: 30,
-  //       ),
-  //       Row(
-  //         children: [
-  //           SizedBox(
-  //             width: 60,
-  //           ),
-  //           Text(
-  //             "Glad to see you!",
-  //             style: TextStyle(
-  //                 color: Colors.black,
-  //                 fontSize: 30,
-  //                 fontWeight: FontWeight.bold),
-  //           ),
-  //         ],
-  //       ),
-  //       SizedBox(
-  //         height: 10,
-  //       ),
-  //       Row(
-  //         children: [
-  //           SizedBox(
-  //             width: 60,
-  //           ),
-  //           Text(
-  //             "Please provide your phone number",
-  //             style: TextStyle(
-  //               color: Colors.grey,
-  //               fontSize: 18,
-  //             ),
-  //           ),
-  //         ],
-  //       ),
-  //       SizedBox(
-  //         height: 10,
-  //       ),
-  //       Container(
-  //         width: 300,
-  //         height: 100,
-  //         child: TextField(
-  //           decoration: InputDecoration(
-  //             hintText: "Phone",
-  //           ),
-  //           controller: controller,
-  //           keyboardType: TextInputType.number,
-  //           maxLines: 1,
-  //           cursorHeight: 25,
-  //           style: TextStyle(fontSize: 20),
-  //           onChanged: (val) {
-  //             phoneno = int.parse(val);
-  //           },
-  //         ),
-  //       ),
-  //
-  //     ],
-  //   );
-  // }
 }
